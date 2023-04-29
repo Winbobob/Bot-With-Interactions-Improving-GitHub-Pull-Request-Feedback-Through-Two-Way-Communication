@@ -11,18 +11,20 @@
 - Danger Bot + two-way communications
 - [Use case](http://zhewe.me/blog/danger-bot-2-use-case)
 - [Tutorial video](http://zhewe.me/blog/danger-bot-2-tutorial-video)
-- Architecture
+- Setup tutorial
   - Danger Bot 2.0
     - Based on the [Danger ruby gem](https://github.com/danger/danger).
-    - Cloned the repository and [modified the gem](https://github.com/Winbobob/danger/compare/bff5e5e..1ccfed2) by adding the UUID and `cancel/confirm` instruct set support.
-    - Updated the gemfile to [point to the customized Danger gem](https://github.com/expertiza/expertiza/blob/1422ae74d1d417164b0e68dd6e23de99393dd93f/Gemfile#L25).
+    - Clone the repository
+    - [Customize the gem](https://github.com/Winbobob/danger/compare/bff5e5e..1ccfed2) by adding the UUID and `cancel/confirm` instruct set support.
+    - Update the gemfile to [point to the customized Danger gem](https://github.com/expertiza/expertiza/blob/1422ae74d1d417164b0e68dd6e23de99393dd93f/Gemfile#L25).
     - Add the [dangerfile](https://github.com/expertiza/expertiza/blob/72fa52a0fab5f19e836205bbdae105b24f240fb9/Dangerfile) with system-specific guidelines.
     - [Setup TravisCI](https://github.com/expertiza/expertiza/blob/064b0b76e0acfe9ab89bc64180bc00aabf1748a7/.travis.yml#L43) to trigger the danger analysis everytime.
   - ParseHub
     - Based on an open-source tool named [TravisBuddy](https://github.com/bluzi/travis-buddy).
-    - Cloned the repository and [modified the tool](https://github.com/Winbobob/travis-buddy/compare/961498..afe92bd) by adding handlers for different kinds of GitHub messages，for instance, `help` comments, `dispute` comments, `rerun` comments.
-    - Deployed the tool as an http application to Heroku (free tier).
-    - Setup GitHub webhooks to send request to the http application hosted on Heroku everyting there is a new comment added to any pull requests.
+    - Clone the repository.
+    - [Customize the tool](https://github.com/Winbobob/travis-buddy/compare/961498..afe92bd) by adding handlers for different kinds of GitHub messages，for instance, `help` comments, `dispute` comments, `rerun` comments.
+    - Deploy the tool as an http application to Heroku or other cloud providers.
+    - Setup [GitHub webhooks](https://docs.github.com/en/webhooks-and-events/webhooks/about-webhooks) to send request to the http application hosted on Heroku everytime there is a new comment added to any pull requests.
 - Workflow
   - <img width="520" alt="Screen Shot 2023-04-29 at 12 57 19" src="https://user-images.githubusercontent.com/7702035/235321836-5af3797e-4dd6-40da-b100-cd7857a442dd.png">
   - Teaching staff or students create a comment on one GitHub pull request page (step 1).
